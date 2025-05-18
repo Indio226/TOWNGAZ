@@ -1,0 +1,2 @@
+mkdir bivmc-community-portal
+cd bivmc-community-portal

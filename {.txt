@@ -1,0 +1,12 @@
+{
+  "name": "bivmc-community-portal",
+  "version": "1.0.0",
+  "description": "BIVMC Virtual Community Portal",
+  "scripts": {
+    "start": "serve",
+    "build": "echo 'No build step needed'"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

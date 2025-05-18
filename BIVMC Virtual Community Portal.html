@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIVMC Virtual Community Portal</title>
+    <style>
+        :root {
+            --primary-color: #1e3d7b;    /* From BIVMC logo blue */
+            --secondary-color: #ff4b2b;   /* Flame accent color */
+            --light-blue: #e8f0ff;
+            --white: #ffffff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-blue);
+        }
+        
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 200px;
+            height: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .portal-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .portal-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portal-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        
+        .login-container {
+            max-width: 400px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #e63e1c;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .portal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="bivmc-logo.png" alt="BIVMC Logo" class="logo">
+        <nav class="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#distributors">Distributors</a>
+            <a href="#commercial">Commercial</a>
+            <a href="#household">Household</a>
+        </nav>
+    </header>
+    
+    <main class="portal-container">
+        <section id="login" class="login-container">
+            <h2>Welcome to BIVMC Virtual Community</h2>
+            <form id="loginForm">
+                <input type="text" class="input-field" placeholder="Username/Email">
+                <input type="password" class="input-field" placeholder="Password">
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p>or</p>
+            <button class="btn" onclick="scanQR()">Scan QR Code for Loyal Customers</button>
+        </section>
+        
+        <section class="portal-grid">
+            <div class="portal-card">
+                <h3>Channel Distributor Portal</h3>
+                <p>Access exclusive dealer resources, marketing materials, and network with other authorized BIVMC distributors.</p>
+                <button class="btn">Enter Portal</button>
+            </div>
+            
+            <div class="portal-card">
+                <h3>Commercial Accounts</h3>
+                <p>Showcase your business, connect with customers, and access special B2B promotions and resources.</p>
+                <button class="btn">Enter Portal</button>
+            </div>
+            
+            <div class="portal-card">
+                <h3>Household Consumer Hub</h3>
+                <p>Connect with local dealers, discover promotions, and join our exclusive community of loyal customers.</p>
+                <button class="btn">Enter Portal</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Brenton International Venture Manufacturing Corporation. All rights reserved.</p>
+        <p>LPG Specialists at your service</p>
+    </footer>
+    
+    <script>
+        function scanQR() {
+            // QR code scanning functionality would be implemented here
+            alert('QR Code scanner opening...');
+        }
+    </script>
+</body>
+</html>
